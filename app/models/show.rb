@@ -5,6 +5,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    Show.tap.where(rating: highest_rating)
+    show = Show.where(rating: highest_rating)
+    show
   end
 end
